@@ -7,6 +7,7 @@ import { RechnungComponent } from './rechnung/rechnung.component';
 import { RouterModule } from '@angular/router';
 import { provideForRootGuard } from '@angular/router/src/router_module';
 import {ROUTE_CONFIG} from './app.routes';
+import { RandomNumberGenerator } from './services/RandomNumberGenerator.service';
 
 @NgModule({
   declarations: [
