@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { UstComponent } from './umsatzsteuer/ust.component';
 import { RechnungComponent } from './rechnung/rechnung.component';
 import { RouterModule } from '@angular/router';
-import { provideForRootGuard } from '../../node_modules/@angular/router/src/router_module';
+import { provideForRootGuard } from '@angular/router/src/router_module';
 import {ROUTE_CONFIG} from './app.routes';
 
 @NgModule({
