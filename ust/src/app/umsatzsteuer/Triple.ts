@@ -1,4 +1,4 @@
-import { RandomNumberGenerator } from './RandomNumberGenerator';
+import { RandomNumberGenerator } from '../services/RandomNumberGenerator.service';
 
 export class Triple{
     text: string = "";
