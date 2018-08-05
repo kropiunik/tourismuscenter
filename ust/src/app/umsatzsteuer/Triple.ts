@@ -54,10 +54,10 @@ export class Triple{
                 this.text = "Brutto: " + this.numToString(this.brutto) + " (" + this.code + " % USt)"; break;
             }
             case 3: {
-                this.text = this.numToString(this.brutto) + " brutto (" + this.code + " % USt)"; break
+                this.text = this.numToString(this.brutto) + " brutto (" + this.code + " % inkl. USt)"; break
             }
             case 4: {
-                this.text = this.numToString(this.brutto) + " = (" + (this.code+100) + " % USt)"; break
+                this.text = this.numToString(this.brutto) + " = (" + (this.code+100) + " % inkl. USt)"; break
             }
         }
     }
