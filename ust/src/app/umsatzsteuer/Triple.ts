@@ -87,31 +87,30 @@ export class Triple {
         this.ust = this.roundTo2(this.rng.nextFloat() * 5000) + 1;
         this.netto = this.roundTo2(this.ust / ( this.code)  * 100);
         this.brutto = this.roundTo2(this.ust  + this.netto);
-       
-        let choice = this.rng.nextRange(1,5);
+        const choice = this.rng.nextRange(1, 5);
 
-        switch (choice){
+        switch (choice) {
             case 1: {
-                this.text = "Umsatzsteuer = " + this.numToString(this.ust) + " = " + this.code + " %";  break;
+                this.text = 'Umsatzsteuer = ' + this.numToString(this.ust) + ' = ' + this.code + ' %';  break;
             }
             case 2: {
-                this.text = this.numToString(this.ust) + " sind " + this.code + " % USt"; break;
+                this.text = this.numToString(this.ust) + ' sind ' + this.code + ' % USt'; break;
             }
             case 3: {
-                this.text =  "Netto: "+ this.numToString(this.netto) + " Brutto: " + this.numToString(this.brutto);  break;
+                this.text =  'Netto: ' + this.numToString(this.netto) + ' Brutto: ' + this.numToString(this.brutto);  break;
             }
             case 4: {
-                this.text =  "Brutto: "+ this.numToString(this.brutto) + " USt: " + this.numToString(this.ust);  break;
+                this.text =  'Brutto: ' + this.numToString(this.brutto) + ' USt: ' + this.numToString(this.ust);  break;
 
             }
         }
     }
 
-    roundTo2(num: number){
+    roundTo2(num: number) {
         let n = Math.floor(num * 1000);
-        let r = n % 10;
+        const r = n % 10;
         n = Math.floor(n / 10);
-        if(r >= 5){
+        if (r >= 5) {
             n++;
         }
         n = n / 100.00;
