@@ -21,8 +21,8 @@ export const ROUTE_CONFIG: Routes = [
         path: 'rechnung',
         component: RechnungComponent
     },
-    { 
+    {
         path: '**',
         redirectTo: 'home'
     }
-]
+];
