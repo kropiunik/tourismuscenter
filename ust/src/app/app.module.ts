@@ -9,13 +9,15 @@ import { provideForRootGuard } from '@angular/router/src/router_module';
 import {ROUTE_CONFIG} from './app.routes';
 import { RandomNumberGenerator } from './services/RandomNumberGenerator.service';
 import { KassabuchComponent } from './kassabuch/kassabuch.component';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UstComponent,
     RechnungComponent,
-    KassabuchComponent
+    KassabuchComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
