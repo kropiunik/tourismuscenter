@@ -1,15 +1,18 @@
 import {  BrowserModule } from '@angular/platform-browser';
 import {   NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { UstComponent } from './umsatzsteuer/ust.component';
 import { RechnungComponent } from './rechnung/rechnung.component';
-import { RouterModule } from '@angular/router';
-import { provideForRootGuard } from '@angular/router/src/router_module';
-import {ROUTE_CONFIG} from './app.routes';
-import { RandomNumberGenerator } from './services/RandomNumberGenerator.service';
 import { KassabuchComponent } from './kassabuch/kassabuch.component';
 import { TopbarComponent } from './topbar/topbar.component';
+
+import { Router, RouterModule } from '@angular/router';
+import { provideForRootGuard } from '@angular/router/src/router_module';
+import { RandomNumberGenerator } from './services/RandomNumberGenerator.service';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -17,11 +20,36 @@ import { TopbarComponent } from './topbar/topbar.component';
     UstComponent,
     RechnungComponent,
     KassabuchComponent,
-    TopbarComponent
+    TopbarComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+      {
+          path: '',
+          redirectTo: 'start',
+          pathMatch: 'full'
+      },
+      {
+          path: 'start',
+          component: HomeComponent
+      },
+      {
+        path: 'home',
+        component: HomeComponent
+      },
+      {
+          path: 'ust',
+          component: UstComponent
+      },
+      {
+          path: 'rechnung',
+          component: RechnungComponent
+      },
+  
+  ])
   ],
   providers: [],
   bootstrap: [AppComponent]
