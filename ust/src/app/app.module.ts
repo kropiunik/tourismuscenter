@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { UstComponent } from './umsatzsteuer/ust.component';
 import { RechnungComponent } from './rechnung/rechnung.component';
 import { KassabuchComponent } from './kassabuch/kassabuch.component';
-import { TopbarComponent } from './topbar/topbar.component';
+
 
 import { Router, RouterModule } from '@angular/router';
 import { provideForRootGuard } from '@angular/router/src/router_module';
@@ -20,7 +20,6 @@ import { HomeComponent } from './home/home.component';
     UstComponent,
     RechnungComponent,
     KassabuchComponent,
-    TopbarComponent,
     HomeComponent
   ],
   imports: [
