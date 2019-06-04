@@ -1,5 +1,5 @@
 {
-  "name": "mongodb",
+  "name": "mongo-server",
   "version": "1.0.0",
   "description": "Mongodb Server",
   "main": "server.js",
