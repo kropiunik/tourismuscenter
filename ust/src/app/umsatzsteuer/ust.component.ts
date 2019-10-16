@@ -82,7 +82,7 @@ export class UstComponent implements OnInit {
     doc.save(filename);
   }
 
-  @ViewChild('content') content: ElementRef;
+  @ViewChild('content', { static: true }) content: ElementRef;
   public downloadPDF(){
 
     let doc = new jsPDF();
