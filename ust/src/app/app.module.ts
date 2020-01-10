@@ -12,6 +12,10 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { KickenComponent } from './kicken/kicken.component';
 
+import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
+  MatSortModule, MatTableModule } from "@angular/material";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +29,11 @@ import { KickenComponent } from './kicken/kicken.component';
   imports: [
     BrowserModule,
     FormsModule,
+    MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
     RouterModule.forRoot([
       {
           path: '',
@@ -52,7 +61,8 @@ import { KickenComponent } from './kicken/kicken.component';
         component: KickenComponent
     },
   
-  ])
+  ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
