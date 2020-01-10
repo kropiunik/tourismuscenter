@@ -10,6 +10,7 @@ import { KassabuchComponent } from './kassabuch/kassabuch.component';
 
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { KickenComponent } from './kicken/kicken.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     UstComponent,
     RechnungComponent,
     KassabuchComponent,
-    HomeComponent
+    HomeComponent,
+    KickenComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,10 @@ import { HomeComponent } from './home/home.component';
           path: 'rechnung',
           component: RechnungComponent
       },
+      {
+        path: 'kicken',
+        component: KickenComponent
+    },
   
   ])
   ],
