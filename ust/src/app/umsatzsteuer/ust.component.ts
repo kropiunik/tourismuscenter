@@ -12,23 +12,22 @@ export class UstComponent implements OnInit {
 
 
   tripleSet : TripleSet;
-  seed: number = 0;
+
 
   constructor() { 
-    this.tripleSet = new TripleSet(11);
-    this.seed = this.tripleSet.getSeed();
+    this.tripleSet = new TripleSet(10);
   }
 
   ngOnInit() {
 
   }
 
-  onClickNewTripleSet(){
-    if(this.seed != 0 && this.seed != NaN)
-      this.tripleSet.initFromSeed(this.seed)
+  onClickNewTripleSet(seed: number){
+    console.log(seed);
+    if(seed != 0 && seed != NaN)
+      this.tripleSet.initFromSeed(seed)
     else
-      this.tripleSet = new TripleSet(11);
-      this.seed = this.tripleSet.getSeed();
+      this.tripleSet = new TripleSet(10);
   }
 
   public downloadExercise(){
@@ -52,7 +51,7 @@ export class UstComponent implements OnInit {
     doc.setFontSize(fontSize+2);
     doc.text("Berechnen Sie die fehlenden Werte!",xOffset,yOffset-lineHeight);
     doc.setFontSize(fontSize);
-    doc.text("(seed: " + this.seed + ")", widthText+widthNetto+widthUSt+xOffset, yOffset-lineHeight);
+    doc.text("(seed: " + this.tripleSet.getSeed() + ")", widthText+widthNetto+widthUSt+xOffset, yOffset-lineHeight);
     //header netto
     doc.rect(widthText+xOffset, yOffset, widthNetto, lineHeight);
     doc.text("   NETTO", widthText+xOffset, yOffset+textPadding);
@@ -77,7 +76,7 @@ export class UstComponent implements OnInit {
       doc.rect(widthText+widthNetto+widthUSt+xOffset, yOffset+linecount*lineHeight, widthBrutto, lineHeight);
       linecount++;
     }
-    let filename = this.seed.toString();
+    let filename = this.tripleSet.getSeed().toString();
     filename += (withSolution)? "_loesung.pdf"  : "_angabe.pdf";
     doc.save(filename);
   }

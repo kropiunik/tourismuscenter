@@ -1,15 +1,17 @@
 
 
 <h2>UMSATZSTEUER-BEISPIELE-GENERATOR</h2>
-<input type="text" id="seed" [(ngModel)]="seed">
-<label>Gib die "Seed" ein, oder nichts für zufällig generierte Aufgaben</label>
+
+<button (click)="onClickNewTripleSet(input.value); input.value=''">Neue Aufgabe erstellen</button>
 <br>
-<button (click)="onClickNewTripleSet()">Neue Aufgabe erstellen</button>
+
+<small>Gib die "ID" ein, oder Anzahl der Beispiele, oder nichts.</small>
+<br>
+<input type="text" id="seed" name="input" #input>
 
 <div id="content" #content>
-    <p>seed:{{tripleSet.getSeed()}}</p>
+    
     <h3>Berechnen Sie die fehlenden Netto-, Brutto- oder USt-Werte.</h3>
-
     <table style="width:100%">
         <tr>
             <td></td>
@@ -26,9 +28,10 @@
             <td width="10%" align = 'right'> {{val.numToString(val.brutto)}}</td>
         </tr>
     </table>
+    <h6>ID:{{tripleSet.getSeed()}}</h6>
 </div>
 <button (click)="generateDocument()">Angabe herunterladen</button>
 <button (click)="generateDocument(true)">Lösung herunterladen</button>
-<button (click)="downloadPDF()">special</button>
+
 
 

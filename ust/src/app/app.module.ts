@@ -12,8 +12,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { KickenComponent } from './kicken/kicken.component';
 
-import { MatInputModule, MatPaginatorModule, MatProgressSpinnerModule, 
-  MatSortModule, MatTableModule } from "@angular/material";
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -24,16 +24,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RechnungComponent,
     KassabuchComponent,
     HomeComponent,
-    KickenComponent
+    KickenComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MatInputModule,
+    MatButtonModule,
     MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatProgressSpinnerModule,
     RouterModule.forRoot([
       {
           path: '',
