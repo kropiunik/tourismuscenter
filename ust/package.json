@@ -25,7 +25,7 @@
     "@types/mongodb": "^3.1.27",
     "angular-pdf-generator": "^0.1.0",
     "core-js": "^2.5.4",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "mongodb": "^3.4.1",
     "mongoose": "^5.5.11",
     "rxjs": "~6.5.3",
